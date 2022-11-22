@@ -1,3 +1,3 @@
 // Built-in modules
-// FS module - sync
+// FS module - sync vs async
 
