@@ -1,28 +1,20 @@
-// Built-in modules
-// HTTP module
+// Npm - Global command, comes with node
+// npm --version or npm --v
 
-// All http properties
-const http = require('http');
+// Local dependency - use it only in this particular project
+// npm i <packageName>
 
-// Create a server
-const server = http.createServer((request, response) => {
-	// Request
-	if (request.url === '/'){
-		// Response
-		response.end('Welcome to our home page.');
-		// or response.write('Welcome to our home page.'); response.end();
-		return;
-	}
-	if (request.url === '/about'){
-		response.end('Here is our short history...');
-		return;
-	}
-	// Default reponse (error or page 404)
-	response.end(`
-		<h1>Oops ! 404</h1>
-		<p>We can't seem to find the page your are looking for !</p>
-		<a href="/">Back to home page</a>
-	`);
-});
-// http://localhost:3000/ => Welcome to our home page.
-server.listen(3000);
+// Global dependency - use it in any project
+// npm i -g <packageName>
+// sudo npm install -g <packageName> (Mac)
+
+// package.json - manifest file (stores important info about the project)
+// Manual approach => create package.json in the root, create properties, ...
+// Automatic approach => npm init (step by step, press enter to skip)
+// npm init -y (everything default)
+
+// Lodash
+const _ = require('lodash');
+const items = [1, [2, [3, [4]]]];
+const flatItems = _.flattenDeep(items);
+console.log(flatItems); // [ 1, 2, 3, 4 ]
