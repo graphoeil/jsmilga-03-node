@@ -18,10 +18,11 @@
 // by automatically restarting the node application when file changes 
 // in the directory are detected.
 // npm i nodemon --save-dev
+// If globaly, launch with nodemon app.js (no need to npm start or run dev)
 
 // Lodash
 const _ = require('lodash');
 const items = [1, [2, [3, [4]]]];
 const flatItems = _.flattenDeep(items);
 console.log(flatItems); // [ 1, 2, 3, 4 ]
-console.log('Hello people');
+console.log('Hello Wolrd!');
