@@ -13,8 +13,15 @@
 // Automatic approach => npm init (step by step, press enter to skip)
 // npm init -y (everything default)
 
+// Nodemon
+// nodemon is a tool that helps develop Node.js based applications 
+// by automatically restarting the node application when file changes 
+// in the directory are detected.
+// npm i nodemon --save-dev
+
 // Lodash
 const _ = require('lodash');
 const items = [1, [2, [3, [4]]]];
 const flatItems = _.flattenDeep(items);
 console.log(flatItems); // [ 1, 2, 3, 4 ]
+console.log('Hello people');
